@@ -1,0 +1,33 @@
+name: CI Build and Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v4
+      
+    - name: Set up environment (e.g., Node.js, Python, Java)
+      # Replace this with the appropriate setup action for your project's language
+      # Example for Node.js: uses: actions/setup-node@v4 with: node-version: '20'
+      # Example for Python: uses: actions/setup-python@v5 with: python-version: '3.11'
+      run: echo "Configure your language environment here"
+
+    - name: Install dependencies
+      # Replace with your dependency installation command (e.g., npm install, pip install, mvn install)
+      run: echo "Install dependencies command here"
+
+    - name: Build project
+      # Replace with your build command (e.g., npm run build, mvn build)
+      run: echo "Build command here"
+
+    - name: Run tests
+      # Replace with your test command (e.g., npm test, pytest, mvn test)
+      run: echo "Run tests command here"
